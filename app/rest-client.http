@@ -1,0 +1,27 @@
+GET http://localhost:3000/bank-slip HTTP/1.1
+
+###
+
+POST http://localhost:3000/bank-slip HTTP/1.1
+Content-Type: application/json
+
+{
+  "dueDate": "2025-02-20T00:00:00.000Z",
+  "value": 1000.00,
+  "status": "PENDING",
+  "paymentDate": null
+}
+
+###
+
+GET http://localhost:3000/bank-slip HTTP/1.1
+
+### 
+
+PATCH http://localhost:3000/bank-slip/5c21ef30-1495-46e6-bbfa-3cddf10c5c00 HTTP/1.1
+Content-Type: application/json
+
+{
+  "status": "PAID",
+  "paymentDate": "2025-02-20T00:00:00.000Z"
+}

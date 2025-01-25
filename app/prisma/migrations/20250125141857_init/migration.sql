@@ -1,0 +1,10 @@
+-- CreateTable
+CREATE TABLE "BankSlip" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "dueDate" DATETIME NOT NULL,
+    "value" REAL NOT NULL,
+    "status" TEXT NOT NULL,
+    "paymentDate" DATETIME,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
