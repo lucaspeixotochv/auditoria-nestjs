@@ -6,19 +6,24 @@ Este projeto é um microserviço de auditoria desenvolvido utilizando NestJS, My
 
 O projeto está organizado da seguinte forma:
 
+### `app/`
+
+Contém um exemplo de aplicação backend
+
 ### `audit/`
 
 Contém o código do microserviço de auditoria, incluindo controladores, serviços, entidades e DTOs.
 
 ### `docker/`
 
-Contém o arquivo `docker-compose.yml` para configurar os serviços do MySQL e RabbitMQ.
+Contém o arquivo `docker-compose.yml` para configurar os serviços do MySQL, RabbitMQ e Adminer.
 
 ## Tecnologias Utilizadas
 
 - **NestJS**: Framework para construção de aplicações Node.js escaláveis.
 - **MySQL**: Banco de dados relacional utilizado para armazenar os registros de auditoria.
 - **RabbitMQ**: Broker de mensagens utilizado para receber notificações de auditoria.
+- **Adminer**: Ferramenta de gerenciamento de banco de dados que permite a administração de bancos de dados MySQL, PostgreSQL, SQLite, entre outros, através de uma interface web simples e intuitiva.
 
 ## Configuração e Execução
 
