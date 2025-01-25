@@ -3,6 +3,7 @@ import { AuditService } from './audit.service';
 import { CreateAuditDto } from './dto/create-audit.dto';
 import { Audit } from './entities/audit.entity';
 import { Ctx, EventPattern, Payload, RmqContext } from '@nestjs/microservices';
+import { Queues } from '../../shared/enums/queues.enum';
 
 @Controller('audit')
 export class AuditController {
@@ -18,7 +19,7 @@ export class AuditController {
     return this.auditService.findAll();
   }
 
-  @EventPattern({ cmd: 'audit' })
+  @EventPattern({ cmd: Queues.AUDIT })
   getNotifications(
     @Payload() data: CreateAuditDto,
     @Ctx() context: RmqContext,

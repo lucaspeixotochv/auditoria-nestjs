@@ -17,7 +17,7 @@ export class PrismaService extends PrismaClient implements OnModuleInit {
             ? params.args.data
             : params.args?.where || {},
         old:
-          params.action === 'update'
+          params.action === 'update' || params.action === 'delete'
             ? await this[params.model].findUnique({ where: params.args.where })
             : {},
       };
